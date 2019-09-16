@@ -14,15 +14,12 @@ public class PostsViewController {
     @Autowired
     private PostService postsService;
 
-
-
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String list(Model model) {
         model.addAttribute("appName", "Моё супер приложение");
-        model.addAttribute("posts", postsService.listAllPosts());
+        model.addAttribute("posts", postsService.posts);
         return "list";
     }
-
 
     @ResponseBody
     @RequestMapping(path = "/post/{id}", method = RequestMethod.GET)

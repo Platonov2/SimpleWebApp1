@@ -5,12 +5,11 @@ import java.util.Date;
 public class Post {
     private String text;
     private Date creationDate;
-    private Integer likes;
+    private Integer likes = 0;
 
-    public Post(String text, Date creationDate, Integer likes){
+    public Post(String text, Date creationDate){
         this.text = text;
         this.creationDate = creationDate;
-        this.likes = likes;
     }
 
     public Integer getLikes() {
