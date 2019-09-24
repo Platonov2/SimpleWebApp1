@@ -8,7 +8,7 @@ public class Post {
     private Integer likes = 0;
     private Integer id;
 
-    public Post(Integer id, String text, Date creationDate){
+    public Post(Long id, String text, Date creationDate){
         this.id = id;
         this.text = text;
         this.creationDate = creationDate;
@@ -29,7 +29,7 @@ public class Post {
         return text;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 }
